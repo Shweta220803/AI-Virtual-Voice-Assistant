@@ -4,7 +4,8 @@ import axios from "axios";
 export const userDataContext = createContext();
 
 const UserContext = ({ children }) => {
-  const BACKEND_URL = "http://localhost:8000";
+  // const BACKEND_URL = "http://localhost:8000";
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const [userData, setUserData] = useState(null);
   const [frontendImage, setFrontendImage] = useState(null);
