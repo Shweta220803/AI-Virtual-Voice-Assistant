@@ -20,6 +20,10 @@ app.use(cors({
     credentials:true
 }))
 
+
+app.get('/', (req, res) => {
+    res.send('API is Working')
+})
 //  Routes
 app.use('/api/auth', authRouter)
 app.use('/api/user', userRouter)
